@@ -11,7 +11,6 @@ public:
 	stack();
 	size_t count() const; 
 	void push(T const &);
-	void printStack();
 	T pop();
 private:
 	T * array_; //массив который будем забивать
