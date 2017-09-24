@@ -9,7 +9,8 @@
 ## Tutorial
 
 Предоставленный интерфейс для реализации программы:
-'''
+```ShellSession
+
 template <typename T>
 class stack
 {
@@ -23,4 +24,5 @@ private:
     size_t array_size_;
     size_t count_;
 };
-'''
+
+```
