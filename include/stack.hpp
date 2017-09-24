@@ -1,5 +1,5 @@
-#ifndef Stack_h
-#define Stack_h
+#ifndef stack_hpp
+#define stack_hpp
 
 #include <iostream>
 #include <stdexcept>
@@ -64,4 +64,4 @@ T stack<T>::pop()
 	return array_[count_];
 }
 
-#endif /* Stack_h */
+#endif /* stack_hpp */
