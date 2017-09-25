@@ -23,7 +23,7 @@ int main()
 			cout << intStack.pop() << endl;
 		}
 		
-		cout << "Number of elements in Stack:" << intStack.count() << endl;
+		cout << "Number of elements in Stack = " << intStack.count() << endl;
 		intStack.pop(); //Вызов исключения т.к. стек пустой
 	}
 	catch (const exception& e) //Обработка исключений
