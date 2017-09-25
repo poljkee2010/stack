@@ -15,6 +15,7 @@ public:
 	size_t count() const;
 	void push(T const &);
 	T pop();
+	~stack();
 private:
 	T * array_; //массив который будем забивать
 	size_t count_; //номер элемента,добавляемый в куче
