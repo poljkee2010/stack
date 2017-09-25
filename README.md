@@ -27,3 +27,20 @@ private:
 };
 
 ```
+##Message terminal:
+```ShellSession
+Elements of STACK:
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+Stack Empty!
+```
+
+
