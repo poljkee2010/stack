@@ -2,22 +2,31 @@
 #include "stack.hpp"
 using namespace std;
 
-int main() {
-try 
+int main() 
 {
-	stack<int> st; 
-	int ct = 0;
-	char ch;
-	while (ct++<10)
-	{
-		cin >> ch;
-		st.push(ch); // помещаем элементы в стек
+	try {
+		cout << "Elements of STACK:" << endl;
+		
+		stack<int> intStack;
+		intStack.push(0);
+		intStack.push(1);
+		intStack.push(2);
+		intStack.push(3);
+		intStack.push(4);
+		intStack.push(5);
+		intStack.push(6);
+		intStack.push(7);
+		intStack.push(8);
+		intStack.push(9);
+
+		for (int i = 0; i < 10; i++) {
+			cout << intStack.pop() << endl;
+		}
+		
+		intStack.pop(); //Вызов исключения т.к. стек пустой
 	}
-}
-    
-catch (const exception& e)  	//обработка исключений
-{
-	cout << e.what() << endl;
-}
-	return 0;
+	catch (const exception& e) //Обработка исключений
+	{ 
+		cout << e.what() << endl;
+	}
 }
