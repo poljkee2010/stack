@@ -40,6 +40,7 @@ Elements of STACK:
 2
 1
 0
+Number of elements in Stack = 0
 Stack Empty!
 ```
 
