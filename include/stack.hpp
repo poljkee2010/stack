@@ -62,7 +62,7 @@ T stack<T>::pop()
 {
 	if (count_ == 0) //проверяем размер стека
 		throw runtime_error("Stack Empty!");
-	array_[--count_]; // удаляем элемент из стека
+	--count_; 
 	return array_[count_];
 }
 
@@ -72,4 +72,4 @@ size_t stack<T>::count() const // используем спецификатор 
 	return count_;
 }
 
-#endif /* Stack_hpp */
+#endif /* STACK_HPP */
