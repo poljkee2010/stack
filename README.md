@@ -27,7 +27,7 @@ private:
 };
 
 ```
-##Message terminal:
+## Message terminal
 ```ShellSession
 Elements of STACK:
 9
