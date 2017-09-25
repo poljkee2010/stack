@@ -66,25 +66,4 @@ size_t stack<T>::count() const // используем спецификатор 
 	return count_;
 }
 
-int main() {
-	try
-	{
-		stack<int> st;
-		int ct = 0;
-		char ch;
-		while (ct++<10)
-		{
-			cin >> ch;
-			st.push(ch); // помещаем элементы в стек
-		}
-		cout << st.count() << endl;
-	}
-
-	catch (const exception& e)  	//обработка исключений
-	{
-		cout << e.what() << endl;
-	}
-	return 0;
-}
-
-#endif /* Stack_h */
+#endif /* Stack_hpp */
