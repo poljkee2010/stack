@@ -1,7 +1,6 @@
 #ifndef STACK_HPP
 #define STACK_HPP
 
-#include <iostream>
 #include <stdexcept>
 using namespace std;
 
@@ -41,6 +40,12 @@ void stack<T>::reallocate()
 template <typename T>
 stack<T>::stack() : capacity_(5), count_(0), array_{ new T[capacity_] }
 {}
+
+template <typename T>
+stack<T>::~stack()
+{
+	delete[] array_;  //освобождение памяти
+}
 
 template <typename T>
 void stack<T>::push(T const &value)
