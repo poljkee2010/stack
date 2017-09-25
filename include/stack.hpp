@@ -1,5 +1,5 @@
-#ifndef stack_hpp
-#define stack_hpp
+#ifndef STACK_HPP
+#define STACK_HPP
 
 #include <iostream>
 #include <stdexcept>
@@ -12,7 +12,7 @@ class stack
 {
 public:
 	stack();
-	size_t count() const; 
+	size_t count() const;
 	void push(T const &);
 	T pop();
 private:
@@ -25,43 +25,66 @@ private:
 //реализация методов класса:
 
 template <typename T>
-void stack<T>::reallocate()
+void stack<T>::reallocate() 
 {
 	capacity_ *= 2; //увеличение зарез.памяти в 2 раза
 	T* temp = new T[capacity_]; //выделение памяти под массив temp
 	for (size_t i = 0; i < count_; ++i)
 	{
-		temp[i] = array_[i]; 
+		temp[i] = array_[i];
 	}
 	delete[] array_; //освобождаем изначальный участок памяти
 	array_ = temp;   //меняем указатель
 }
 
 template <typename T>
-stack<T>::stack() 
-{
-	capacity_ = 5;
-	array_ = new T[capacity_]; // выделить память под стек
-	count_ = 0; // инициализируем текущий элемент нулем;
-}
+stack<T>::stack() : capacity_(5), count_(0), array_{ new T[capacity_] }
+{}
 
 template <typename T>
 void stack<T>::push(T const &value)
 {
-	if (count_ >= capacity_) 
+	if (count_ >= capacity_)
 	{
-		reallocate(); 
+		reallocate();
 	}
-	array_[count_++] = value; 
+	array_[count_++] = value;
 }
 
 template <typename T>
 T stack<T>::pop()
 {
 	if (count_ == 0) //проверяем размер стека
-		throw runtime_error("Stack Empty!"); 	
+		throw runtime_error("Stack Empty!");
 	array_[--count_]; // удаляем элемент из стека
 	return array_[count_];
 }
 
-#endif /* stack_hpp */
+template <typename T>
+size_t stack<T>::count() const // используем спецификатор const в конце функции т.к. метод ничего не изменяет,а только возвращает 
+{
+	return count_;
+}
+
+int main() {
+	try
+	{
+		stack<int> st;
+		int ct = 0;
+		char ch;
+		while (ct++<10)
+		{
+			cin >> ch;
+			st.push(ch); // помещаем элементы в стек
+		}
+		cout << st.count() << endl;
+	}
+
+	catch (const exception& e)  	//обработка исключений
+	{
+		cout << e.what() << endl;
+	}
+	return 0;
+}
+
+#endif /* Stack_h */
