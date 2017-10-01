@@ -4,13 +4,13 @@ using namespace std;
 
 void StackInit()
 {
-cout << "File init.cpp" << endl;
-stack<int> intStack;
-cout << "Created intStack" << endl;
+	cout << "File init.cpp" << endl;
+	stack<int> intStack;
+	cout << "Created intStack" << endl;
 }
 
 int main()
 {
-StackInit();
-return 0;
+	StackInit();
+	return 0;
 }
