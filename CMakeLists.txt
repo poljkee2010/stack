@@ -5,10 +5,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON) # Активация 11-го стандар�
 add_library(main STATIC /sources/main.cpp) # Добавление статической библиотеки,используя указанные исходные файлы
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include) # Список директорий,относительно которых следует искать заголовочные файлы
 
-add_executable(example1 ${CMAKE_CURRENT_SOURCE_DIR}/examples/push.cpp) 
-add_executable(example2 ${CMAKE_CURRENT_SOURCE_DIR}/examples/pop.cpp) 
-add_executable(example1 ${CMAKE_CURRENT_SOURCE_DIR}/examples/init.cpp) 
-add_executable(example2 ${CMAKE_CURRENT_SOURCE_DIR}/examples/empty.cpp) 
+add_executable(push ${CMAKE_CURRENT_SOURCE_DIR}/examples/push.cpp) 
+add_executable(pop ${CMAKE_CURRENT_SOURCE_DIR}/examples/pop.cpp) 
+add_executable(init ${CMAKE_CURRENT_SOURCE_DIR}/examples/init.cpp) 
+add_executable(empty ${CMAKE_CURRENT_SOURCE_DIR}/examples/empty.cpp) 
 
 
 target_link_libraries(push main) 
