@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stack.hpp>
+#include "stack.hpp"
 using namespace std;
 
 void StackPop()
@@ -20,6 +20,5 @@ void StackPop()
 int main()
 {
 	StackPop();
-	system("pause");
 	return 0;
 }
