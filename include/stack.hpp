@@ -1,6 +1,7 @@
 #ifndef STACK_HPP
 #define STACK_HPP
 
+#include <iostream>
 #include <stdexcept>
 using namespace std;
 
@@ -10,40 +11,40 @@ template <class T>
 class stack
 {
 public:
-    stack() : capacity_(5), count_(0), array_{ new T[capacity_] } {}
+stack() : capacity_(5), count_(0), array_{ new T[capacity_] } {}
     
 size_t count() const // используем спецификатор const в конце функции т.к. метод ничего не изменяет,а только возвращает 
 {
     return count_;
-        }
+}
 
 void push(T const &value)
 {
     if (count_ >= capacity_)
     {
-    reallocate();
+        reallocate();
     }
     array_[count_++] = value;
-        }
+}
     
 T pop()
 {
-if (count_ == 0) //проверяем размер стека
-throw runtime_error("Stack Empty!");
---count_; 
-return array_[count_];
+    if (count_ == 0) //проверяем размер стека
+         throw runtime_error("Stack Empty!");
+    --count_; 
+    return array_[count_];
 }
 
 ~stack()
 {
-delete[] array_;  //освобождение памяти
+    delete[] array_;  //освобождение памяти
 }
     
 bool empty() const
 {
-if (count_ == 0) //проверяем размер стека
-    return true;
-return false;
+    if (count_ == 0) //проверяем размер стека
+        return true;
+    return false;
 }
 private:
 T * array_; //массив который будем забивать
@@ -56,7 +57,7 @@ void reallocate() //перераспределение
     T* temp = new T[capacity_]; //выделение памяти под массив temp
     for (size_t i = 0; i < count_; ++i)
     {
-    temp[i] = array_[i];
+         temp[i] = array_[i];
     }
     delete[] array_; //освобождаем изначальный участок памяти
     array_ = temp;   //меняем указатель
