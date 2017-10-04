@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stack.hpp>
+#include "stack.hpp"
 using namespace std;
 
 void StackPush()
@@ -20,4 +20,10 @@ void StackPush()
 	{
 		cout << e.what() << endl;
 	}
+}
+
+int main()
+{
+	StackPush();
+	return 0;
 }
