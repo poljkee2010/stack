@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/pop.dir/examples/pop.cpp.o  -o pop -rdynamic libstack.a 

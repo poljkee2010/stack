@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/push.dir/examples/push.cpp.o  -o push -rdynamic libstack.a 
