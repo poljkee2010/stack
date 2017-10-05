@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/empty.dir/examples/empty.cpp.o  -o empty -rdynamic libstack.a 

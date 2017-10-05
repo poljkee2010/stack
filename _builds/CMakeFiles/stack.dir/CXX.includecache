@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/stack.hpp
+stdexcept
+-
+
+/home/poljkee/stack2/sources/main.cpp
+iostream
+-
+stack.hpp
+/home/poljkee/stack2/sources/stack.hpp
+

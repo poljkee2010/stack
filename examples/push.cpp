@@ -6,7 +6,7 @@ void StackPush()
 {
 	try {
 		cout << "File push.cpp" << endl;
-		stack<char> charSt;
+		stack<char>charSt;
 		charSt.push('b');
 		charSt.push('m');
 		charSt.push('s');

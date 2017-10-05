@@ -8,7 +8,7 @@ try
 {
         cout << "Elements of STACK:" << endl;
 
-        stack<int> headStack;
+        stack<int>headStack;
         headStack.push(0);
         headStack.push(1);
         headStack.push(2);

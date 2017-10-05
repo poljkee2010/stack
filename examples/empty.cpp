@@ -6,7 +6,7 @@ void StackEmpty()
 {
 	try {
 		cout << "File empty.cpp" << endl;
-		stack<float> FloatSt;
+		stack<float>FloatSt;
 		for (int i = 0; i != 10; ++i)
 		{
 			FloatSt.push(i);

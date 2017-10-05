@@ -10,7 +10,7 @@ template <class T>
 class stack
 {
 public:
-stack() : capacity_(5), count_(0), array_{ new T[capacity_] } {}
+stack() : capacity_(5), count_(0), array_{ new T[5] } {}
     
 size_t count() const // используем спецификатор const в конце функции т.к. метод ничего не изменяет,а только возвращает 
 {
